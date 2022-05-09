@@ -46,6 +46,12 @@ namespace snake_ladder
                     currentBoardPosition += dicenum;   // currentbordposition + dicenum eg:- 4+4 =8
                 }
 
+                if (currentBoardPosition > 100) // use statement  it chake currentposition >100 true  eg:- 99+2=101 
+                {
+                    Console.WriteLine("You are out of range");
+                    currentBoardPosition -= dicenum;  // currentbordposition - dicenum eg:- 99+2=101 ; 101-2=99 again apply loops
+                }
+
 
                 if (currentBoardPosition < 0)  // use statement 
                 {
